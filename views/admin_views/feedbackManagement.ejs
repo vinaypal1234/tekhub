@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Management</title>
+
+    <!-- CDN LINKS -->
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="../../css/admin/navbar.css" />
+
+    <!-- FEEDBACK MANAGEMENT CSS -->
+    <link rel="stylesheet" href="../../css/admin/feedbackManagement.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <%- include('../../partials/admin/navbar.ejs') %>
+
+    <!-- SHOW COURSE -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Delete</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- PAGINATION -->
+    <ul class="pagination">
+      <%for (i = 1; i <= totalPage; i++) {%>
+
+      <li><%=[i]%></li>
+
+      <%}%>
+    </ul>
+
+    <!-- SCRIPT -->
+    <script src="../../js/admin/feedbackManagement.js"></script>
+  </body>
+</html>

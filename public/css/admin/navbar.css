@@ -1,0 +1,120 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  z-index: 1000;
+  width: 100%;
+  background: white;
+  top: 0;
+  padding: 15px 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  list-style: none;
+  margin-right: 12px;
+}
+
+header ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+  padding: 8px 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+#logout {
+  letter-spacing: 2px;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid transparent;
+  background: black;
+  margin: 0 5px;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  text-decoration: none;
+  color: white;
+}
+
+#logout:hover {
+  border: 2px solid black;
+  background: white;
+  color: black;
+}
+
+.logout_btn {
+  display: flex;
+  align-items: center;
+}
+
+.logout_btn span {
+  display: flex;
+  align-items: center;
+}
+
+.logout_btn span i {
+  font-size: 40px;
+  margin-right: 5px;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu i {
+  font-size: 30px;
+}
+
+header.active nav {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  header {
+    justify-content: space-between;
+    padding: 25px 50px;
+  }
+  header nav {
+    display: none;
+  }
+  header nav ul {
+    display: block;
+    position: absolute;
+    background: white;
+    padding: 20px;
+    width: 90%;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header ul li {
+    display: block;
+    margin: 30px 0;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 25px 25px;
+  }
+}

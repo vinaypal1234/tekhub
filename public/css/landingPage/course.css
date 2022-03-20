@@ -1,0 +1,124 @@
+html {
+  scroll-behavior: smooth;
+}
+/* BANNER SECTION */
+
+.banner {
+  height: 400px;
+  width: 100%;
+  /* border: 2px solid red; */
+  position: relative;
+  z-index: 1;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGVkdWNhdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=600)
+    no-repeat center center/cover;
+  z-index: -2;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.banner .banner-content {
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  height: 200px;
+  width: 80%;
+  /* color: grey; */
+  text-align: center;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.banner .banner-content h1 {
+  font-size: 40px;
+  color: white;
+}
+/* BANNER CSS ENDS */
+/* COURSE SECTION */
+
+.course-section {
+  margin-top: 50px;
+  padding: 10px;
+  background: var(--section-background);
+  width: 100%;
+}
+
+.course-section .container h1 {
+  position: relative;
+  margin: 20px 0;
+  /* text-align: center; */
+  text-transform: capitalize;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.course-section .container h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 5px;
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+
+.course-section .container p {
+  margin-bottom: 20px;
+}
+
+.course-section .container #select-course-category {
+  padding: 10px;
+  text-transform: capitalize;
+  /* border-radius: 5px; */
+  margin-right: 10px;
+}
+
+.course-section .container #select-course-category:focus {
+  outline: none;
+}
+
+.course-section .container #select-course-category option {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.course-section .container .select-category-btn {
+  padding: 10px 22px;
+}
+
+.course-section .container .row .course-container {
+  padding: 15px;
+  margin: 20px 0;
+}
+
+/* COURSE SECTION ENDS */
+/* COURSE DETAIL POPUP */
+
+/* COURSE DETAIL POPUP ENDS*/
+/* LOAD MORE DATA BUTTON */
+
+#load-more-btn {
+  padding: 16px 40px;
+  display: block;
+  margin: 20px auto;
+}
+/* LOAD MORE DATA BUTTON ENDS */

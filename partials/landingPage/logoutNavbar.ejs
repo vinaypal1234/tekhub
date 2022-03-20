@@ -1,0 +1,55 @@
+<div class="topbar">
+  <div class="topbar-section">
+    <div class="topbar-contact-link">
+      <i class="bx bxs-phone"></i><a href="tel:881-026-9902">8810269902</a
+      ><i class="bx bxl-gmail"></i
+      ><a href="mailto:vinaypaldev12@gmail.com">vinaypaldev12@gmail.com</a>
+    </div>
+    <div class="topbar-social-link">
+      <a href="https://www.instagram.com/viinay_pall_"
+        ><i class="bx bxl-instagram"></i
+      ></a>
+      <a href=""><i class="bx bxl-facebook"></i></a>
+      <a href=""><i class="bx bxl-twitter"></i></a>
+      <a href=""><i class="bx bxl-linkedin"></i></a>
+    </div>
+  </div>
+</div>
+<header>
+  <div class="header-section">
+    <h1>TEKHUB</h1>
+    <nav>
+      <ul id="navigation">
+        <li id="nav-item-1" class="nav-item">
+          <a class="nav-link" id="nav-link-1" href="/">home</a>
+        </li>
+        <li id="nav-item-2" class="nav-item dropdown">
+          <a class="nav-link" id="nav-link-2" href="/course">course</a>
+          <ul id="dropdown-menu">
+            <%for(i=0;i < courseCategory.length;i++){%>
+
+            <li class="dropdown-item">
+              <a
+                class="dropdown-link"
+                href="http://localhost:4000/course/<%=courseCategory[i].categoryName%>"
+              >
+                <%=courseCategory[i].categoryName%>
+              </a>
+            </li>
+            <%}%>
+          </ul>
+        </li>
+
+        <li id="nav-item-3" class="nav-item">
+          <a class="nav-link" id="nav-link-3" href="/cart">cart</a>
+        </li>
+        <div class="logout_btn">
+          <a id="logout" href="/logoutStudent">logout</a>
+          <span><i class="bx bxs-user-circle"></i> <%=email%></span>
+        </div>
+      </ul>
+    </nav>
+    <div class="burger-menu"><i class="bx bx-menu"></i></div>
+  </div>
+</header>
+<script src="js/landingPage/navbar.js"></script>

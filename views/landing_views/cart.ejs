@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+
+    <!-- CDN links -->
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="css/landingPage/navbar.css" />
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="css/landingPage/footer.css" />
+
+    <!-- Cart CSS -->
+    <link rel="stylesheet" href="css/landingPage/cart.css" />
+    <link rel="stylesheet" href="css/landingPage/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <%- include('../../partials/landingPage/menu.ejs') %>
+    <%if(cartData===null){%>
+
+    <!-- IF CART IS EMPTY SHOW THIS -->
+    <div class="empty-cart">
+      <h4>My Cart</h4>
+      <div class="empty-cart-image">
+        <img src="image/shopping-cart-svgrepo-com.svg" alt="" />
+        <h4>Your cart is empty</h4>
+        <p>Add courses to it now</p>
+        <a href="/course">Browse Course</a>
+      </div>
+    </div>
+
+    <%}else{%>
+    <!-- IF CART HAS SOMETHING IN IT THEN SHOW THIS -->
+    <div class="cart">
+      <!-- CART CONTAINER -->
+      <div class="items">
+        <%for(i=0;i < cartData.length;i++){%>
+        <div class="cart-item">
+          <img
+            src="<%=cartData[i].courseImg%>"
+            class="cart-course-image"
+            alt=""
+          />
+          <p class="cart-course-name"><%=cartData[i].courseName%></p>
+          <p class="cart-course-price">
+            <span>&#8377;</span
+            ><span class="course-price"><%=cartData[i].coursePrice%></span>
+          </p>
+          <button onclick="removeItem('<%=cartData[i].courseId%>')">
+            Remove
+          </button>
+        </div>
+        <hr />
+        <%}%>
+      </div>
+      <!-- CART TOTAL AND CHECKOUT -->
+      <div class="cart-data">
+        <div class="total">
+          <h5 style="margin: 0">Total Amount :</h5>
+          <span id="cart-total">0</span>
+        </div>
+        <hr />
+        <button id="check-out">Checkout</button>
+      </div>
+    </div>
+    <%}%>
+
+    <!-- FOOTER -->
+    <%- include('../../partials/landingPage/footer.ejs') %>
+
+    <script src="../js/landingPage/cart.js"></script>
+  </body>
+</html>

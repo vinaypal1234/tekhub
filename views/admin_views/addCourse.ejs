@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Course</title>
+
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="../../css/admin/navbar.css" />
+
+    <!-- COURSE MANAGEMENT CSS -->
+    <link rel="stylesheet" href="../../css/admin/addCourse.css" />
+  </head>
+
+  <body>
+    <%- include('../../partials/admin/navbar.ejs') %>
+    <div class="add_course">
+      <form>
+        <h4>Add Course</h4>
+        <select id="course-category">
+          <option selected value="">Select Category</option>
+          <%for(i=0;i< courseCategory.length;i++){%>
+          <option value="<%=courseCategory[i].categoryName%>">
+            <%=courseCategory[i].categoryName%>
+          </option>
+          <%}%>
+        </select>
+        <div class="course_img">
+          <input type="text" id="image" placeholder="Course Image" />
+        </div>
+        <div class="course_name">
+          <input type="text" id="name" placeholder="Course Name" />
+        </div>
+        <div class="course_price">
+          <input type="number" id="price" placeholder="Course Price" />
+        </div>
+        <div class="course_duration">
+          <input type="text" id="duration" placeholder="Course Duration" />
+        </div>
+        <div class="course_description">
+          <input
+            type="text"
+            id="description"
+            placeholder="Course Description"
+          />
+        </div>
+
+        <button id="add-course-btn">ADD</button>
+      </form>
+    </div>
+
+    <script src="../../js/admin/addCourse.js"></script>
+  </body>
+</html>

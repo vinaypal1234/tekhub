@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+
+    <!-- CDN LINKS -->
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- LOGIN CSS -->
+    <link rel="stylesheet" href="../css/admin/login.css" />
+  </head>
+
+  <body>
+    <!-- ADMIN LOGIN FORM -->
+    <div class="admin_login">
+      <form action="/adminCeredentials" method="POST">
+        <h4>Admin Login!</h4>
+
+        <div class="username">
+          <input
+            type="text"
+            id="username"
+            placeholder="username"
+            name="username"
+          />
+          <p id="email_validation"></p>
+        </div>
+
+        <div class="password">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            name="password"
+          />
+          <p id="password_validation"></p>
+        </div>
+
+        <button>Sign In</button>
+      </form>
+    </div>
+  </body>
+</html>

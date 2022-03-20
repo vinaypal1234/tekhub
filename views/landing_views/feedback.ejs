@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feedback</title>
+
+    <!-- CDN LINKS -->
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="css/landingPage/navbar.css" />
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="css/landingPage/footer.css" />
+
+    <!-- REGISTER CSS -->
+    <link rel="stylesheet" href="css/landingPage/main.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <%- include('../../partials/landingPage/navbar.ejs') %>
+
+    <!-- REGISETR FORM -->
+    <section class="register-form section-form">
+      <h2>Your Feedback</h2>
+      <p>Enter your details below send feedback!</p>
+      <hr />
+      <form>
+        <div class="fullname">
+          <input type="text" id="fullname" placeholder=" Full Name" />
+          <span id="fullname-validation" class="validation"></span>
+        </div>
+
+        <div class="email">
+          <input type="text" id="email" placeholder=" Email" />
+          <span id="email-validation" class="validation"></span>
+        </div>
+
+        <div class="message">
+          <input
+            type="text"
+            id="message"
+            placeholder=" message"
+            maxlength="30"
+          />
+          <span id="message-validation" class="validation"></span>
+        </div>
+
+        <button id="feedback-btn">Send</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <%- include('../../partials/landingPage/footer.ejs') %>
+
+    <!-- SCRIPT -->
+    <script src="../js/landingPage/feedback.js"></script>
+  </body>
+</html>

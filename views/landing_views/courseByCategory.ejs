@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- CDN LINKS -->
+    <%- include('../../partials/cdn.ejs') %>
+
+        <!-- NAVBAR CSS -->
+        <link rel="stylesheet" href="../css/landingPage/navbar.css" />
+
+        <!-- FOOTER CSS -->
+        <link rel="stylesheet" href="../css/landingPage/footer.css" />
+
+        <!-- COURSE CSS -->
+        <link rel="stylesheet" href="../css/landingPage/courseByCategory.css" />
+
+        <!-- COURSE DETAIL POPUP CSS -->
+        <link rel="stylesheet" href="../css/landingPage/main.css" />
+
+</head>
+
+<body>
+    <%- include('../../partials/landingPage/menu.ejs') %>
+
+        <section class="course">
+            <div class="container">
+                <h2>
+                    <%=courseByCategory[0].category%>
+                </h2>
+                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis reiciendis omnis id vitae nihil doloremque vero cupiditate debitis et vel ducimus tempora quos eligendi labore, illo, excepturi repellendus sapiente dicta harum animi,
+                    culpa incidunt voluptates. Ipsa quia iste corporis quisquam a iusto natus! Minima ad cum sunt vero eveniet numquam.</p>
+                <p>Click below to See the complete list of courses....</p>
+                <button><a href="/course">All Courses</a></button>
+                <div class="row course-data">
+
+                    <%for(i=0;i < courseByCategory.length;i++){%>
+
+                        <div class="col-12 col-sm-6 col-m-4 col-lg-3 course-container">
+
+                            <div class="course-card">
+
+                                <img class="course-img" onclick="courseDetail('<%=courseByCategory[i]._id%>')" src="<%=courseByCategory[i].img%>" />
+
+                                <div class="course-detail">
+                                    <h4>
+                                        <%=courseByCategory[i].name%>
+                                    </h4>
+                                    <h6>
+                                        
+                                    </h6>
+                                    <h5>
+                                        <%=courseByCategory[i].category%>
+                                    </h5>
+                                    <div class="price">
+                                        <div class="discount-price">
+                                            <span>&#8377;</span><span><%=courseByCategory[i].price%></span>
+                                        </div>
+                                        <div class="actual-price">
+                                            <span><del>&#8377;2000</del></span></div>
+                                    </div>
+                                </div>
+
+                                <!-- ADD TO CART BUTTON -->
+                                <div id="atc-btn">
+                                    <i onclick="addToCart('<%=courseByCategory[i]._id%>')" class='bx bx-cart-alt'></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <%}%>
+
+                </div>
+        </section>
+
+        <!-- COURSE DETAIL POP-UP -->
+        <%- include('../../partials/landingPage/courseDetail.ejs') %>
+
+            <!-- FOOTER -->
+            <%- include('../../partials/landingPage/footer.ejs') %>
+                <script src="../js/landingPage/addToCart.js"></script>
+                <script src="../js/landingPage/courseDetail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registration</title>
+
+    <!-- CDN LINKS -->
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="css/landingPage/navbar.css" />
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="css/landingPage/footer.css" />
+
+    <!-- REGISTER CSS -->
+    <link rel="stylesheet" href="css/landingPage/main.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <%- include('../../partials/landingPage/navbar.ejs') %>
+
+    <!-- REGISETR FORM -->
+    <section class="register-form section-form">
+      <h2>Register</h2>
+      <p>Sign up and start learning!</p>
+      <hr />
+      <form>
+        <div class="fullname">
+          <input type="text" id="fullname" placeholder=" Full Name" />
+          <span id="fullname-validation" class="validation"></span>
+        </div>
+
+        <div class="number">
+          <input type="number" id="number" placeholder=" Number" />
+          <span id="number-validation" class="validation"></span>
+        </div>
+
+        <div class="email">
+          <input type="text" id="email" placeholder=" Email" />
+          <span id="email-validation" class="validation"></span>
+        </div>
+
+        <div class="password">
+          <input type="password" id="password" placeholder=" Password" />
+          <span id="password-validation" class="validation"></span>
+        </div>
+
+        <button id="register-btn">register</button>
+        <span id="already-have-account"
+          >Already Have Account?
+          <a href="http://localhost:4000/login">Sign In </a></span
+        >
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <%- include('../../partials/landingPage/footer.ejs') %>
+
+    <!-- SCRIPT -->
+    <script src="../js/landingPage/register.js"></script>
+  </body>
+</html>

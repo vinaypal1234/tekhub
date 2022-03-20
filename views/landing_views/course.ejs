@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course</title>
+
+    <!-- CDN LINKS -->
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="css/landingPage/navbar.css" />
+
+    <!-- FOOTER CSS -->
+    <link rel="stylesheet" href="css/landingPage/footer.css" />
+
+    <!-- COURSE CSS -->
+    <link rel="stylesheet" href="css/landingPage/course.css" />
+    <link rel="stylesheet" href="css/landingPage/main.css" />
+
+    <!-- COURSE DETAIL POPUP CSS -->
+    <link rel="stylesheet" href="css/landingPage/courseDetail.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <%- include('../../partials/landingPage/menu.ejs') %>
+
+    <!-- BANNER -->
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Get there. From here.</h1>
+        <p>
+          Welcome to the place where success begins. Log in for savings. Ends
+          soon.
+        </p>
+      </div>
+    </section>
+    <!-- BANNER SECTIO ENDS -->
+
+    <!-- COURSE SHOW SECTION -->
+    <section class="course-section">
+      <div class="container">
+        <h1>A broad selection of courses</h1>
+        <p>
+          Here is a complete list of courses we provide Lorem ipsum dolor, sit
+          amet consectetur adipisicing elit. Veritatis reiciendis omnis id vitae
+          nihil doloremque vero cupiditate debitis et vel ducimus tempora quos
+          eligendi labore, illo, excepturi repellendus sapiente dicta harum
+          animi, culpa incidunt voluptates. Ipsa quia iste corporis quisquam a
+          iusto natus! Minima ad cum sunt vero eveniet numquam.
+        </p>
+        <p>Select course by category below..</p>
+
+        <!-- Chhose by category -->
+        <select id="select-course-category">
+          <option value="" selected disabled>select category</option>
+          <%for(i=0;i < courseCategory.length;i++){%>
+
+          <option value="<%=courseCategory[i].categoryName%>">
+            <%=courseCategory[i].categoryName%>
+          </option>
+          <hr />
+          <%}%>
+        </select>
+        <button class="select-category-btn" onclick="showCourseByCategory()">
+          Search
+        </button>
+        <button
+          class="see-allcourse-btn"
+          style="display: none"
+          onclick="showAllCourse()"
+        >
+          All Course
+        </button>
+        <hr />
+
+        <div class="row course-data">
+          <!-- WILL SHOW DATA HERE BY FETCH API -->
+        </div>
+      </div>
+    </section>
+
+    <!-- LOAD MORE PAGINATION -->
+    <button id="load-more-btn" onclick="loadMoreBtn()">load more</button>
+
+    <!-- COURSE DETAIL POP-UP -->
+    <%- include('../../partials/landingPage/courseDetail.ejs') %>
+
+    <!-- FOOTER -->
+    <%- include('../../partials/landingPage/footer.ejs') %>
+
+    <!-- SCRIPT -->
+    <script src="../js/landingPage/course.js"></script>
+    <script src="../js/landingPage/courseDetail.js"></script>
+    <script src="../js/landingPage/addToCart.js"></script>
+  </body>
+</html>

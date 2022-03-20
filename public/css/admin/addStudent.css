@@ -1,0 +1,97 @@
+.add-student {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.add-student::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(https://images.unsplash.com/photo-1536242918817-db5e93c7a0e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhhY2tpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60)
+    no-repeat center center/cover;
+  z-index: -2;
+  filter: blur(1px);
+}
+
+.add-student::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+form {
+  width: 400px;
+  padding: 30px;
+  margin: 0 auto;
+  /* box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2); */
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+form h4 {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+form div {
+  position: relative;
+  margin-bottom: 30px;
+  color: #6a6f73;
+}
+
+form div p {
+  margin: 0;
+  color: red;
+  font-size: 14px;
+}
+
+form div i {
+  position: absolute;
+  top: 13.5%;
+  left: 5px;
+  font-size: 30px;
+}
+
+form div input {
+  width: 100%;
+  height: 50px;
+  padding-left: 5px;
+}
+
+form select {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+  padding: 14px 26px;
+  border: none;
+  background: #3bb7f5;
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+form span {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}

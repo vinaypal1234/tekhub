@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Management</title>
+
+    <!-- CDN LINKS -->
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="../../css/admin/navbar.css" />
+
+    <!-- COURSE MANAGEMENT CSS -->
+    <link rel="stylesheet" href="../../css/admin/courseManagement.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <%- include('../../partials/admin/navbar.ejs') %>
+
+    <!-- ADD COURSE BUTTON -->
+    <div class="add-course-category-btn">
+      <button id="add-course-btn">
+        <a href="/admin/dashboard/addCourse">add course</a>
+      </button>
+    </div>
+
+    <!-- SHOW COURSE -->
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Edit</th>
+          <th>Delete</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- PAGINATION -->
+    <ul class="pagination">
+      <%for (i = 1; i <= totalPage; i++) {%>
+
+      <li><%=[i]%></li>
+
+      <%}%>
+    </ul>
+
+    <!-- COURSE EDIT POP-UP -->
+    <div class="edit-popup"></div>
+    <div class="addCourse-popup"></div>
+
+    <!-- SCRIPT -->
+    <script src="../../js/admin/courseManagement.js"></script>
+  </body>
+</html>

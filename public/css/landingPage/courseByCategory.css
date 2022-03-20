@@ -1,0 +1,18 @@
+.course {
+  margin-top: 100px;
+  padding: 10px;
+  background: var(--section-background-color);
+}
+
+.course .container p {
+  margin-bottom: 20px;
+}
+
+.course .container button {
+  padding: 20px 40px;
+}
+
+.course .container .row .course-container {
+  padding: 15px;
+  margin: 20px 0;
+}

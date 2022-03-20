@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+
+  <!-- CDN LINKS -->
+  <%- include('../../partials/cdn.ejs') %>
+
+  <!-- NAVBAR CSS -->
+  <link rel="stylesheet" href="css/landingPage/navbar.css" />
+
+  <!-- FOOTER CSS -->
+  <link rel="stylesheet" href="css/landingPage/footer.css" />
+
+  <!-- LOGIN CSS -->
+  <link rel="stylesheet" href="css/landingPage/login.css" />
+  <link rel="stylesheet" href="css/landingPage/main.css" />
+
+  <body>
+    <!-- NAVBAR -->
+    <%- include('../../partials/landingPage/navbar.ejs') %>
+
+    <!-- LOGIN FORM -->
+    <section class="login-form section-form">
+      <h2>Login Form</h2>
+      <p>Enter your Ceredentials to login to Tekhub.</p>
+      <hr />
+      <form>
+        <div class="email">
+          <input type="text" id="email" placeholder=" Email" />
+          <span id="email-validation" class="validation"></span>
+        </div>
+
+        <div class="password">
+          <input type="password" id="password" placeholder=" Password" />
+          <span id="password-validation" class="validation"></span>
+        </div>
+
+        <button id="login-btn">sign in</button>
+        <span id="dont-have-account"
+          >Don't Have Account?
+          <a href="http://localhost:4000/register">Register Now</a></span
+        >
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <%- include('../../partials/landingPage/footer.ejs') %>
+
+    <!-- SCRIPT -->
+    <script src="../js/landingPage/login.js"></script>
+  </body>
+</html>

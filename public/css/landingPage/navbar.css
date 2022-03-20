@@ -1,0 +1,251 @@
+.topbar {
+  width: 100%;
+  background: var(--primary-color);
+}
+
+.topbar .topbar-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+.topbar .topbar-section .topbar-contact-link {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.topbar .topbar-section .topbar-contact-link i {
+  margin-right: 4px;
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+
+.topbar .topbar-section .topbar-contact-link a {
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.topbar .topbar-section .topbar-social-link i {
+  color: var(--text-white);
+  font-size: 20px;
+  margin: 7px 8px 0 8px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 0 25px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header .header-section {
+  width: 82%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-section h1 {
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+header .header-section nav #navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+header .header-section nav #navigation .nav-item {
+  line-height: 60px;
+  margin-right: 12px;
+}
+
+header .header-section nav #navigation .nav-item .nav-link {
+  padding: 6px 14px;
+  text-transform: capitalize;
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+header .header-section nav #navigation .nav-item.dropdown {
+  position: relative;
+  transition: 0.4s linear;
+}
+
+header .header-section nav #navigation .nav-item.dropdown #dropdown-menu {
+  position: absolute;
+  padding: 0;
+  width: 300%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-left: 3.5px solid var(--secondary-color);
+  display: none;
+}
+
+header
+  .header-section
+  nav
+  #navigation
+  .nav-item.dropdown
+  #dropdown-menu
+  .dropdown-item {
+  display: block;
+  width: 100%;
+  line-height: 26px;
+  padding: 15px 0;
+}
+
+header
+  .header-section
+  nav
+  #navigation
+  .nav-item.dropdown
+  #dropdown-menu
+  .dropdown-item:hover {
+  background: var(--secondary-color);
+}
+
+header
+  .header-section
+  nav
+  #navigation
+  .dropdown
+  #dropdown-menu
+  .dropdown-item
+  .dropdown-link {
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 6px 14px;
+  letter-spacing: 1px;
+}
+
+header
+  .header-section
+  nav
+  #navigation
+  .nav-item.dropdown:hover
+  > #dropdown-menu {
+  display: block;
+}
+
+header .header-section nav #navigation #login,
+#register,
+#logout {
+  letter-spacing: 2px;
+  border: none;
+  padding: 10px 24px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  background: var(--primary-color);
+  margin: 0 5px;
+  font-size: 14px;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+header .header-section nav #navigation #login:hover,
+#register:hover,
+#logout:hover {
+  border: 2px solid var(--primary-color);
+  background: white;
+  color: var(--text-dark);
+}
+
+/* LOGOUT CSS */
+
+/* .logout_btn {
+  display: flex;
+  align-items: center;
+}
+
+.logout_btn span {
+  display: flex;
+  align-items: center;
+}
+
+.logout_btn span i {
+  font-size: 40px;
+  margin-right: 5px;
+} */
+
+header .header-section .burger-menu {
+  display: none;
+}
+
+header .header-section .burger-menu i {
+  color: var(--text-dark);
+  font-size: 30px;
+}
+
+header.active .header-section nav {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  header {
+    padding: 25px;
+  }
+  header .header-section .burger-menu {
+    display: block;
+  }
+  header .header-section nav {
+    display: none;
+  }
+  header .header-section nav #navigation {
+    display: block;
+    position: absolute;
+    background: white;
+    padding: 20px;
+    width: 90%;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .header-section nav #navigation .nav-item {
+    display: block;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .topbar .topbar-section {
+    width: 90%;
+    display: block;
+    padding: 5px 20px;
+  }
+  .topbar .topbar-section div {
+    margin: 10px 0;
+  }
+  header .header-section {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .topbar .topbar-section {
+    width: 100%;
+    display: block;
+    padding: 5px 20px;
+  }
+  .topbar .topbar-section div {
+    margin: 10px 0;
+  }
+  header .header-section {
+    width: 100%;
+  }
+}
+
+/* @media (max-width: 990px) {
+  header: {
+  }
+} */

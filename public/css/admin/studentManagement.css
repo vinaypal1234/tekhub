@@ -1,0 +1,205 @@
+/* The Table Attributes */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* #add_course {
+    display: block;
+    width: 30%;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 30px auto;
+    padding: 20px 0;
+    color: white;
+  
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 0.2s linear;
+    border: 2px solid transparent;
+}
+
+#add_course:hover {
+    background: white;
+    border: 2px solid #3bb7f5;
+    color: #3bb7f5;
+} */
+
+.add-student-btn {
+    width: 60%;
+    margin: 50px auto 0 auto;
+    /* border: 2px solid red; */
+}
+
+#add-student-btn {
+    border: none;
+    padding: 16px 50px;
+    background: #3bb7f5;
+    letter-spacing: 1px;
+    margin-left: auto;
+    font-size: 14px;
+    display: block;
+}
+
+#add-student-btn a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+#add-course-btn:hover,
+#add-category-btn:hover {
+    opacity: .95;
+}
+
+table {
+    width: 60%;
+    /* background-color: red; */
+    text-align: center;
+    margin: 20px auto;
+    font-family: sans-serif;
+    border-bottom: 5px solid black;
+}
+
+table tbody tr:nth-child(2n+1) {
+    background-color: #f5f6f7;
+}
+
+
+/* The Attributes that the Head and the Body of the Table Share */
+
+th {
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+
+td {
+    padding: 5px 0;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+td span i {
+    color: black;
+    font-size: 22px;
+}
+
+td img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+/* Attributes of the Head of the Body */
+
+
+/* Attributes of Each Cell */
+
+
+/*Attributes of Span*/
+
+
+/*Attributes */
+
+.pagination {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.pagination li {
+    margin: 0 4px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: white;
+    background: #3bb7f5;
+    cursor: pointer;
+}
+
+.edit-popup {
+    display: none;
+    height: 200vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.edit-popup i {
+    position: absolute;
+    color: white;
+    top: 0;
+    right: 0;
+    font-size: 50px;
+}
+
+.edit-popup .form {
+    width: 400px;
+    padding: 30px;
+    margin: 50px auto;
+    /* box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.2); */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.edit-popup .form h4 {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+.edit-popup .form div {
+    position: relative;
+    margin-bottom: 30px;
+    color: #6a6f73;
+}
+
+.edit-popup .form div p {
+    margin: 0;
+    color: red;
+    font-size: 14px;
+}
+
+.edit-popup .form div i {
+    position: absolute;
+    top: 13.5%;
+    left: 5px;
+    font-size: 30px;
+}
+
+.edit-popup .form div input {
+    width: 100%;
+    height: 50px;
+    padding-left: 5px;
+}
+
+.edit-popup .form button {
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    padding: 14px 26px;
+    border: none;
+    background: #3bb7f5;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.edit-popup .form span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}

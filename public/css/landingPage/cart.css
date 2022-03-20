@@ -1,0 +1,139 @@
+.empty-cart {
+  width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.empty-cart .empty-cart-image {
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.empty-cart .empty-cart-image img {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.empty-cart .empty-cart-image p {
+  margin-bottom: 30px;
+}
+
+.empty-cart .empty-cart-image a {
+  text-decoration: none;
+  padding: 12px 20px;
+  background: var(--secondary-color);
+}
+
+.cart {
+  height: 500px;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+
+.cart .items {
+  padding: 10px;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.cart .items .cart-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px 0;
+}
+
+.cart .items .cart-item .cart-course-image {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.cart .items .cart-item .cart-course-name {
+  margin: 0;
+  width: 50%;
+}
+
+.cart .items .cart-item .cart-course-price {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.cart .items .cart-item .cart-course-price span:first-child {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.cart .items .cart-item button {
+  padding: 8px 30px;
+}
+
+.cart .cart-data {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--section-background);
+}
+
+.cart .cart-data .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart .cart-data .total #cart-total {
+  display: flex;
+  align-items: center;
+}
+
+.cart .cart-data .total #cart-total > * {
+  font-size: 20px;
+}
+
+.cart .cart-data #check-out {
+  padding: 12px 40px;
+  background-color: var(--primary-color);
+  margin: 30px 0;
+  display: block;
+  margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+  .cart {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cart {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .cart .cart-item {
+    display: block;
+  }
+  .cart .cart-item .cart-course-name {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  .cart .cart-item button {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .empty-cart {
+    width: 400px;
+  }
+}

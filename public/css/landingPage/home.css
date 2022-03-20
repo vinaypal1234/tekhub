@@ -1,0 +1,177 @@
+/* CAROUSEL CSS */
+
+.carousel .carousel-inner {
+  height: 80vh;
+  position: relative;
+}
+
+.carousel .carousel-inner::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel .carousel-inner .carousel-item {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+.carousel .carousel-inner .carousel-item .carousel-content {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-white);
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-content h5 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+/* .carousel .carousel-inner .carousel-item .carousel-content button {
+  border: none;
+  padding: 25px 70px;
+  background: #3bb7f5;
+  margin-top: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-content button a {
+  color: white;
+  text-decoration: none;
+}
+
+.carousel .carousel-inner .carousel-item .carousel-content button:hover {
+  opacity: 0.8;
+} */
+
+/* CAROUSEL CSS ENDS */
+
+/* NEW COURSE SECTION */
+
+.new-course-section {
+  margin-top: 100px;
+  padding: 10px;
+  background: var(--section-background-color);
+}
+
+.new-course-section .container h2 {
+  margin-top: 20px;
+}
+
+.new-course-section .container p {
+  margin-bottom: 20px;
+}
+
+.new-course-section .container button {
+  padding: 20px 40px;
+}
+
+.new-course-section .container .row .new-course-data {
+  padding: 15px;
+  margin: 20px 0;
+}
+
+/* NEW COURSE SECTION ENDS */
+
+/* REVIEW SECTION */
+
+.review {
+  margin-top: 100px;
+}
+
+.review #review-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.review .swiper {
+  width: 70%;
+  height: 500px;
+  background: var(--section-background-color);
+}
+
+.review .swiper .swiper-slide {
+  text-align: center;
+}
+
+.review .swiper .swiper-slide .swiper-slide-content {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.review .swiper .swiper-slide p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* REVIEW SECTION ENDS */
+
+/* MAP SECTION */
+
+.map {
+  margin-top: 100px;
+}
+
+/* MAP SECTION ENDS */
+
+/* MEDIA */
+
+@media (max-width: 1190px) {
+  .banner .banner-details a {
+    width: 50%;
+  }
+}
+
+@media (max-width: 845px) {
+  .banner .banner-details a {
+    width: 60%;
+  }
+}
+
+@media (max-width: 845px) {
+  .banner .banner-details {
+    width: 80%;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner .banner-details {
+    width: 100%;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    height: 90vh;
+  }
+  .banner .banner-details {
+    width: 100%;
+  }
+  .banner .banner-details a {
+    width: 65%;
+  }
+}
+
+/* MEDIA ENDS */

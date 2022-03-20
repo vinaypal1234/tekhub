@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <!-- CDN LINKS -->
+    <%- include('../../partials/cdn.ejs') %>
+
+    <!-- NAVBAR CSS -->
+    <link rel="stylesheet" href="../css/admin/navbar.css" />
+
+    <!-- DASHBOARD CSS -->
+    <link rel="stylesheet" href="../css/admin/dashboard.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <%- include('../../partials/admin/navbar.ejs') %>
+
+    <!-- BANNER -->
+    <div class="banner">
+      <div class="banner-details">
+        <h1>This is a Admin Panel of TEKHUB</h1>
+        <a href="/admin/dashboard/coursemanagement">Course Management</a>
+      </div>
+    </div>
+  </body>
+</html>
